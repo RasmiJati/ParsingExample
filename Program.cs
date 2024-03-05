@@ -28,7 +28,7 @@ namespace ParseAndNavigation
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=State}/{action=Index}/{id?}");
 
             app.Run();
         }

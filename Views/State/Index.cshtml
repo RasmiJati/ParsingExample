@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@ViewBag.a</h1>
+<h1>@ViewData["b"]</h1>
+<h1>@TempData["c"]</h1>
+
+
+<h1>@ViewBag.a+1</h1>
+<h1>@ViewData["b"]+1</h1>
+<h1>@TempData["c"]+1</h1>
+
+
+@{
+    int data1 = @ViewBag.a +1;
+    //int data2 = @ViewData["b"]+1;    error
+   // int data3 = @TempData["c"]+1;     error
+    int data2 = Convert.ToInt32( @ViewData["b"].ToString()) + 1;
+    int data3 = Convert.ToInt32(@TempData["c"].ToString()) + 1;
+}
+
+<p>@data1</p>
+<p>@data2</p>
+<p>@data3</p>

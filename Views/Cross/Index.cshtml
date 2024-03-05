@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@{
+   // int data1 = @ViewBag.a + 1;  //return error
+   // int data2 = Convert.ToInt32(@ViewData["b"].ToString()) + 1;    //error
+    int data3 = Convert.ToInt32(@TempData["c"].ToString()) + 1;
+}
+
+
